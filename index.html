@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+
+  <!-- Rating state start -->
+
+  <main class="container">
+    <div class="first-card">
+      <div class="icon-star"><img src="assets/images/icon-star.svg" alt="icon star"></div>
+      <h1 class="first-title-card">How did we do?</h1>
+      <p class="ask-feedback">
+        Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!
+      </p>
+      <div class="btn-rating-group">
+        <input type="button" value="1" class="btn-rating">
+        <input type="button" value="2" class="btn-rating">
+        <input type="button" value="3" class="btn-rating">
+        <input type="button" value="4" class="btn-rating">
+        <input type="button" value="5" class="btn-rating" id="ratingMax">
+      </div>
+      <button type="submit" class="btn-submit">Submit</button>
+    </div>
+    <div class="thank-you-card" id="thanksCard">
+      <div class="img-thank-you">
+        <img src="assets/images/illustration-thank-you.svg" alt="cellphone icon">
+      </div>
+      <p class="inform-selection">You selected <span class="add-rating">Add rating</span> of 5</p>
+      <h1 class="second-title-card">Thank you!</h1>
+      <p class="thanking"> We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+    </div>
+  </main>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
