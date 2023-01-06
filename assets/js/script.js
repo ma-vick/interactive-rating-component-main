@@ -1,25 +1,16 @@
-// ocultar o card de agardecimento
-window.onload = ocultThanksCard;
-function ocultThanksCard(){
-    document.getElementById('thanksCard').style.display = 'none';
-}
+const mainContainer = document.querySelector('.first-card')
+const thanksContainer = document.querySelector('.thank-you-card')
+const submitButton = document.getElementById('btnSubmit')
+const rating = document.getElementById('rating')
+const rates = document.querySelectorAll('.btn-rating')
 
-// adicionar classe selecionado
+submitButton.addEventListener("click", () => {
+    thanksContainer.classList.remove('hidden')
+    mainContainer.style.display = 'none'
+})
 
-// selecionar a nota escolhida
-    // adicionar EventListener
-function selectedRating() {
-    var btnRating = document.getElementById("ratingMax");
-
-    btnRating.addEventListener("click", function(){
-        if (btnRating.classList.contains('btn-rating-selected') == true) {
-            btnRating.removeAttribute('class');
-        } else {
-            btnRating.setAttribute('class', 'btn-rating-selected');
-        }
-    });
-}
-
-document.addEventListener("DOMContentLoaded", selectedRating, false);
-
-// apresentar card de agradecimento
+rates.forEach((rate) => {
+    rate.addEventListener('click', () => {
+        rating.innerHTML = rate.value
+    })
+})

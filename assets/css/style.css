@@ -71,6 +71,7 @@ p.ask-feedback {
 .btn-rating-group {
     display: flex;
     justify-content: space-between;
+    list-style: none;
 }
 
 .btn-rating {
@@ -81,20 +82,17 @@ p.ask-feedback {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn-rating:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-rating:focus {
     background-color: var(--button-active-color);
-    color: white;
-}
-
-.btn-rating-selected {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.rating-max {
-    background-color: var(--primary-color);
     color: white;
 }
 
@@ -107,6 +105,13 @@ p.ask-feedback {
     letter-spacing: 2px;
     border-radius: 30px;
     background-color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: white;
+    color: var(--primary-color);
 }
 
 .thank-you-card {
@@ -139,4 +144,8 @@ p.ask-feedback {
     color: var(--paragraph-color);
     margin: 0 -10px 20px 0;
     text-align: center;
+}
+
+.hidden {
+    display: none;
 }
